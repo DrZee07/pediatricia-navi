@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Plus, FolderCheck, Play } from "lucide-react";
+import { Plus, FolderCheck, Play, Book, FileText } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { CaseMentorTabs } from "@/components/case-mentor/CaseMentorTabs";
 
