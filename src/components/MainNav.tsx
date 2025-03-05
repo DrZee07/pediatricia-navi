@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Stethoscope, Calculator, Book, Ambulance, Menu, X, BookOpen, LogIn, Database, Play } from "lucide-react";
+import { Stethoscope, Calculator, Book, Ambulance, Menu, X, BookOpen, LogIn, Play, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const MainNav = () => {
@@ -13,8 +14,7 @@ const MainNav = () => {
     { name: "Resources", icon: <Book className="w-5 h-5" />, path: "/resources" },
     { name: "Journal Club", icon: <BookOpen className="w-5 h-5" />, path: "/journal-club" },
     { name: "CaseMentor", icon: <Play className="w-5 h-5" />, path: "/case-mentor" },
-    // Admin only route
-    { name: "Knowledge Base", icon: <Database className="w-5 h-5" />, path: "/knowledge-base" },
+    { name: "Pediatric Chat", icon: <MessageSquare className="w-5 h-5" />, path: "/pediatric-chat" },
   ];
 
   return (
@@ -36,14 +36,14 @@ const MainNav = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-300 hover:scale-105"
               >
                 {item.icon}
                 <span className="ml-2">{item.name}</span>
               </Link>
             ))}
             <Link to="/auth">
-              <Button variant="outline" size="sm" className="ml-4">
+              <Button variant="outline" size="sm" className="ml-4 transition-all duration-300 hover:scale-105 hover:shadow-md">
                 <LogIn className="w-4 h-4 mr-2" />
                 Sign In
               </Button>
@@ -54,7 +54,7 @@ const MainNav = () => {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-50"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -70,7 +70,7 @@ const MainNav = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
+                className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {item.icon}
@@ -79,7 +79,7 @@ const MainNav = () => {
             ))}
             <Link
               to="/auth"
-              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50"
+              className="flex items-center px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 transition-all duration-200"
               onClick={() => setIsOpen(false)}
             >
               <LogIn className="w-5 h-5" />

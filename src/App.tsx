@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -12,8 +13,8 @@ import Calculator from "./pages/Calculator";
 import Emergency from "./pages/Emergency";
 import Resources from "./pages/Resources";
 import JournalClub from "./pages/JournalClub";
-import KnowledgeBase from "./pages/KnowledgeBase";
 import CaseMentor from "./pages/CaseMentor";
+import PediatricChat from "./pages/PediatricChat";
 
 const queryClient = new QueryClient();
 
@@ -34,8 +35,8 @@ const App = () => (
               <Route path="/emergency" element={<Emergency />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/journal-club" element={<JournalClub />} />
-              <Route path="/knowledge-base" element={<KnowledgeBase />} />
               <Route path="/case-mentor" element={<CaseMentor />} />
+              <Route path="/pediatric-chat" element={<PediatricChat />} />
             </Routes>
           </main>
         </BrowserRouter>
